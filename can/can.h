@@ -5,8 +5,6 @@
 #include <driver/gpio.h>
 #include <driver/twai.h>
 
-namespace ESP_CAN {
-
 enum CAN_BaudRate {
     b25K,
     b50K,
@@ -17,6 +15,8 @@ enum CAN_BaudRate {
     b800k,
     b1000k
 };
+
+namespace ESP_CAN {
 
 class CAN {
 private:
