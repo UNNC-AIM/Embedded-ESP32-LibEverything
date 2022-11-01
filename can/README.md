@@ -34,8 +34,8 @@ ESP_CAN::CAN instance_name;
 \
 完成CAN接口的初始化以后便可使用CAN收发函数：  
 ```c++
-inline esp_err_t CAN_Transmit(const can_frame_data frame, TickType_t ticks_to_wait);
-inline esp_err_t CAN_Receive(const can_frame_data frame, TickType_t ticks_to_wait);
+inline esp_err_t ESP_CAN::CAN_Transmit(const can_frame_data frame, TickType_t ticks_to_wait);
+inline esp_err_t ESP_CAN::CAN_Receive(const can_frame_data frame, TickType_t ticks_to_wait);
 ```
 由于Espressif官方提供的API已经十分详尽，这里直接使用内联函数替换官方API。  
 \
