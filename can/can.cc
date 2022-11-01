@@ -1,7 +1,7 @@
 #include <can.h>
 
 namespace ESP_CAN {
-    void CAN::CAN_Setup(gpio_num_t TX_PIN, gpio_num_t RX_PIN, CAN_BaudRate baudrate) {
+    void CAN::CAN_Setup(gpio_num_t TX_PIN, gpio_num_t RX_PIN, can_baudrate baudrate) {
         set_pin = TWAI_GENERAL_CONFIG_DEFAULT(TX_PIN, RX_PIN, TWAI_MODE_NORMAL);
         set_filter = TWAI_FILTER_CONFIG_ACCEPT_ALL();
         switch (baudrate) {
@@ -44,3 +44,4 @@ namespace ESP_CAN {
         return ESP_OK;
     }
 }
+
