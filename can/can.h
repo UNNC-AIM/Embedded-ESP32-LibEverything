@@ -23,8 +23,8 @@ namespace ESP_CAN {
         return twai_transmit((twai_message_t*)&frame, ticks_to_wait);
     }
 
-    inline esp_err_t CAN_Receive(const can_frame_data frame, TickType_t ticks_to_wait) {
-        return twai_receive((twai_message_t*)&frame, ticks_to_wait);
+    inline esp_err_t CAN_Receive(const can_frame_data* frame, TickType_t ticks_to_wait) {
+        return twai_receive((twai_message_t*)frame, ticks_to_wait);
     }
     
     class CAN {
